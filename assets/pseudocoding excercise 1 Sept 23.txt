@@ -1,0 +1,180 @@
+# PSEUDOCODE WEB API - POP QUIZ PROJECT
+
+This pseudocode was completed in colloboration.
+Colloborators: Umhar, Craig, Memouna, Gwyneth and Dairon.
+Date: 1st Sept 2023.
+
+Important to take the time to consider how the website will work from multiple perspectives. How will the user interact with the website, what do they need to see, understand and what do we expect them to do.
+
+Then with that understanding, what do I as a Front End developer need to complete on a high level, in order to achieve that.
+
+Subsequently, what programming tools, concepts, functions etc. do I need to use to achieve that, and can I start coding out a bit under each point. I can review the past week(s) material to get a clue on how to code the initial bits.
+
+# User view
+  ===========================================================
+
+User visits website to access quiz
+On the left hand side of the page there is a link to view highscores.
+On the top right hand there is a timer.
+In the middle the User sees a description on how to play the game
+Below this the user will see a blank area where questions will appear
+and below this is a start button
+
+User clicks on the start button and sees the first question
+User sees a timer start - counting downwards
+User selects an answer from the multiple choice questions
+User goes through each question, if incorrect the timer loses 10 seconds.
+At the end of the game, either by timer running out or user completing all questions, the user is given the option to save their high score.
+
+If saved the high score gets saved to the list. 
+
+User is provided with an option to start again.
+
+
+(OUTPUTs from this stage: wireframe(s) of the website to be built, with relevant elements incorporated e.g. color, size of items on display etc.)
+
+
+
+# What developer has to do
+  ===========================================================
+
+
+1. Make sure HTML, script, css is linked correctly.
+
+2. Text for 'View Highscores' that links to a page that holds a list of highscores.hmtl.
+
+3. Build a section for a brief description - top middle/center. 
+Type in the required description.
+
+4. Ensure timer is on top right corner. 
+This will require an IF statement, and a variable to store the score, i < ; i++ etc. 
+
+5. Have an area for questions, before games starts this is blank/clear.
+Will need to use DATA-STATE of 'Hidden', when start button is clicked Data-state changes to 'Visible'
+
+(potential dev options to have a timer count down 3 --2 --1, and then reveal question)
+
+6. Create a start button. 
+When start button is clicked the first question will appear, and timer will start.
+Ensure start button is linked to JS. Will link to timer, and will trigger question bank to appear.
+
+7. Users is offered ten multiple choice questions.  
+A object needs to be created with multiple choice questions, the goal is to have more than 10 questions, e.g. 25, and that with the use of a randomiser, the questions are chosen from this bank of questions and presented to the user. 
+
+Could use a loop to iterate over math.floor(math.random() * <how many questions you have e.g 25>)
+
+In the loop the maximum of 10 {this to be tested}
+Will need to NEST multiple functions.
+
+
+8. The user will first see the question, in 1em (big enough to read)
+Below the question there will be four options, text each within a container.
+If any question is answered incorrectly, the time loses 10 seconds. Timer will flash when user answers incorrectly. 
+
+(Potential Dev options: Red / Jumps out at User when question is wrong)
+
+Need to use an IF statement
+IF Answer is false minus 10 seconds, color change to red for 1 sec, and move to next question.
+If true, continue to next question.
+
+Answered questions need a container in order to store 
+A list to store 'answeredQuestions'
+
+{This is the previous loop that continues}
+This repeats until timer is done or user has answered 10 questions.
+
+9. Game Ends, and Display User Score. 
+No more questions are displayed, they disappear.
+DATA-STATE is changed to 'Hidden'.
+using either textContent or innerHTML to remove the last question, and show below.
+
+From 'userScore' variable show on screen.
+
+So using textContent and innerHTML - DOM methods to show/ reveal information and then also to hide / remove elements.
+
+
+10. The option to save is provided to the user. An alert appears, this asks the user to enter their initials, and if they wish to save.
+
+require a button called 'save?' a form for the user to enter their initials and 'restart' to start over.
+Will need to use localStorage.
+A data validation will be needed on the 'initialContainer' ensure that only 2 characters from the alphabet are chosen. 
+Use a JS item to ensure all characters are lower case before storing. 
+
+need to build a 'pastHighScore' object that will store the initial and the high score.
+Need to use JSON.stringify and JSON.parse 
+From the 'questionBank' this needs to 
+worth exploring if .splice( , index)  is needed, or if the randomiser will be sufficient?
+
+
+if user saves, or user restarts game, the 'score' variable should clear.
+The html to reset.
+
+
+(OUTPUT stage 2: logic behind all the elements needed)
+
+
+# Tools to accomplish above tasks.
+  ===========================================================
+
+  1. start button calls a function. 
+
+var timeEL = document.querySelector("idClassTimer")
+
+var idClassButton = document.querySelector("")
+
+var mainEL = document.querySelector("question")
+
+var secondsLeft = 180000 (maybe 2 minutes a question?)
+
+idClassButton.addEventListener which based on 'click'
+starts function timer() {
+    var timerInterval = setTime(function() {
+        secondsLeft--;
+        timeEL.textContent = secondsLeft; 
+
+        sendQuestion()
+
+        if(secondsLeft === 0) {
+            clearInterval(timerInterval);
+        sendHighscore()
+        }
+    },1000);
+}
+
+
+2. Text for 'View Highscores' that links to a page that holds a list of highscores.hmtl.
+
+3. Build a section for a brief description - top middle/center. 
+Type in the required description.
+
+4. Ensure timer is on top right corner. Build out timer code further.
+
+5. Have an area for questions, before games starts this is blank/clear.
+
+//* Function to create and send questions
+function sendQuestion() {
+  var questionEl = document.createElement("h1");
+  questionEl.setAttribute("data-state", ---- );
+  mainEl.appendChild(imgEl);
+
+
+
+
+}
+
+6. Work on the start button. Test out that it works. Timer starts etc.
+
+7. Users is offered ten multiple choice questions.  
+
+8. The user will first see the question,
+9. Game Ends, and Display User Score. 
+10. The option to save is provided to the user.
+
+function sendHighscore()
+
+
+(OUPUT stage 3: build the html, javascript, asset folder etc., review online documents, code and test along the way. Remember to commit each time you have working code. Make use of alert, confirm, prompt and console.log when testing but change to show elements on the page.)
+
+
+
+
