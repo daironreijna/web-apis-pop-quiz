@@ -124,7 +124,7 @@ var idClassButton = document.querySelector("")
 
 var mainEL = document.querySelector("question")
 
-var secondsLeft = 180000 (maybe 2 minutes a question?)
+var secondsLeft = 180000 // (maybe 2 minutes a question?)
 
 idClassButton.addEventListener which based on 'click'
 starts function timer() {
@@ -138,7 +138,7 @@ starts function timer() {
             clearInterval(timerInterval);
         sendHighscore()
         }
-    },1000);
+    },180000);
 }
 
 
