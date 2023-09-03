@@ -1,25 +1,29 @@
-# Web APIs Code Quiz
+# <b><i><span style="color:blue">Web APIs Code Quiz</span></b></i>
+
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ## Overview
 
 This coding project relates to building a timed coding quiz with multiple-choice questions. This README will provide an overview of the project, its purpose, and the requirements. 
 
 ## Table of Contents
-
+[Description](#description)
+[Features](#feautures)
+[How to Run the Application](#how-to-run-the-application)
+[The Power of Web APIs](#the-power-of-web-apis)
+[The DOM and Web APIs](#the-dom-and-web-apis)
+[Resources](#resources)
+[Contributing](#contributing)
+[Accessibility Testing](#accessibility-testing)
+[License](#license)
 
 ## Description
 
 Welcome to this Javascript project which is focused on  exploring the power of  Application Programming Interfaces (APIs). APIs allow developers to extend web browsers' functionalities using JavaScript, opening up a world of dynamic and interactive possibilities. In this project, I delved into the Web API, starting with the essential Document Object Model (DOM).
 
+In this project, Web APIs Code Quiz, a dynamic, timed coding quiz is built  with multiple-choice questions. This project is designed to utilise knowledge of JavaScript fundamentals. It will also store high scores so that users can compare their progress with their peers.
 
-
-Welcome to the Module 6 Challenge: Web APIs Code Quiz! In this project, you will build a dynamic, timed coding quiz with multiple-choice questions. This quiz application is designed for coding boot camp students to test their knowledge of JavaScript fundamentals. It will also store high scores so that users can compare their progress with their peers.
-
-## User Story
-
-As a coding boot camp student, I want to take a timed quiz on JavaScript fundamentals that stores high scores so that I can gauge my progress compared to my peers.
-
-## Feautures
+## Features
 
 The code quiz has the following features:
 
@@ -32,15 +36,17 @@ The code quiz has the following features:
 
 ## How to Run the Application
 
-To run the application, you can visit the live URL where it's deployed. 
+To run the application, you can visit the live URL where it's deployed.
+<u>https://daironreijna.github.io/web-apis-pop-quiz/</u>
 
 Additionally, you can clone the project repository and open the HTML file in a web browser.
+<u>https://github.com/daironreijna/web-apis-pop-quiz</u>
 
 ### The Power of Web APIs
 
 Some APIs are already built directly into web browsers. When a web page loads, a virtual representation of the page known as the Document Object Model (DOM) is created. This DOM allows us to leverage JavaScript to interact with HTML elements, transforming static web content into dynamic and engaging user experiences.
 
-Throughout this module, you'll develop practical skills in:
+Throughout this project, I have develop practical skills in:
 
 - Navigating and manipulating the DOM.
 - Adding event listeners to elements and managing events.
@@ -52,8 +58,9 @@ Throughout this module, you'll develop practical skills in:
 
 The Document Object Model (DOM) is a crucial concept in web development. It represents an in-memory object-oriented version of an HTML document. With the DOM, you can use JavaScript to interact with HTML, enabling you to select elements, retrieve content, insert content, generate new elements, and respond to events like clicks or key presses.
 
-As you progress through this module, you'll explore the intricacies of Web APIs and their role in creating dynamic web applications. You'll learn to navigate the DOM, manipulate HTML elements, add event listeners, implement timers, and store data—all using the power of JavaScript and the browser's built-in APIs.
+This project explores the intricacies of Web APIs and their role in creating dynamic web applications. I have learnt to navigate the DOM, manipulate HTML elements, add event listeners, implement timers, and store data—all using the power of JavaScript and the browser's built-in APIs.
 
+<!-- 
 ### What's Ahead
 
 #### Module 6.1 - Introduction to Web APIs
@@ -88,8 +95,8 @@ This Challenge is your chance to put everything you've learned into action. You'
 #### Module 6.4 - Code Quiz Challenge
 
 Put your skills to the test with the Code Quiz Challenge. Build a timed, multiple-choice quiz that tracks high scores. Create a polished, responsive user interface using JavaScript and showcase your mastery of Web APIs.
-
-### Resources
+-->
+### <u>Resources</u>
 
 - [JavaScript Tutorial: What Is the Document Object Model?](https://www.tutorialrepublic.com/javascript-tutorial/javascript-dom.php)
 
@@ -138,9 +145,18 @@ Put your skills to the test with the Code Quiz Challenge. Build a timed, multipl
 
 ## Contributing
 
-Acknowledgement: [Pseudocoding](./assets/pseudocoding%20excercise%201%20Sept%2023.txt) took place in colloboration during a breakout room amongst other students. 
+Acknowledgement: [Pseudocoding](./assets/pseudocoding%20excercise%201%20Sept%2023.txt) took place in colloboration during a breakout room with other Front End Web Dev & UX bootcamp students. 
 
 Coding of JS solely by developer. 
+
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/daironreijna"><img src="https://avatars.githubusercontent.com/u/140647099?v=4" width="100px;" alt="headshot of Dairon Reijna"/><br /><sub><b>Dairon Reijna</b></sub></a><br /></a><a href="https://github.com/daironreijna/web-apis-pop-quiz" title="Design">🎨</a><a href="https://github.com/daironreijna/web-apis-pop-quiz" title="Code">💻</a></td>
+    <!--<td align="center"><a href="https://github.com/alemus98"><img src="https://avatars.githubusercontent.com/u/110573487?v=4" width="100px;" alt="a basic github avatar"/><br /><sub><b>Andres Lemus</b></sub></a><br /><a href="https://github.com/LujanSolo/Impulse/commits/al/login-page-test" title="Design">🎨</a><a href="https://github.com/LujanSolo/Impulse/commits/al-life-event-model" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/LujanSolo"><img src="https://avatars.githubusercontent.com/u/104592750?v=4" width="100px;" alt="a dashing photo of LujanSolo"/><br /><sub><b>Jamie Lujan</b></sub></a><br /><a href="https://github.com/LujanSolo/Impulse/commits/jl/feature" title="Design">🎨</a> <a href="https://github.com/LujanSolo/Impulse/commits/jl/routes" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/joshgmurray"><img src="https://avatars.githubusercontent.com/u/110637896?v=4" width="100px;" alt="a basic github avatar"/><br /><sub><b>Josh Murray</b></sub></a><br /><a href="https://github.com/LujanSolo/Impulse/commits/jm/life-user-seed" title="Design">🎨</a> <a href="https://github.com/LujanSolo/Impulse/commits/jm/seed-data" title="Code">💻</a></td> -->
+  </tr>
+</table>
 
 I welcome contributions from the community to enhance the Bootstrap Portfolio Project. By participating in this project, you contribute to a vibrant and inclusive environment. To ensure a positive experience the code of conduct we will adhere to is based on [The Contributor Covenant](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md). Please review and follow these guidelines when contributing.
 
