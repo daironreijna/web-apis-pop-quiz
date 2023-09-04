@@ -143,6 +143,8 @@ Put your skills to the test with the Code Quiz Challenge. Build a timed, multipl
 
 - [Window: localStorage property](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)
 
+- [W3Schools (n.d.) HTML DOM Element removeChild()](https://www.w3schools.com/jsref/met_node_removechild.asp)
+
 ## Contributing
 
 Acknowledgement: [Pseudocoding](./assets/pseudocoding%20excercise%201%20Sept%2023.txt) took place in colloboration during a breakout room with other Front End Web Dev & UX bootcamp students. 
