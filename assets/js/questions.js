@@ -583,6 +583,8 @@ function sendQuestion() {
    list2.remove("hide");
    list2.add("start");
 
+   // get questions to show on html but randomise which ones are shown.
+   
    const getQuestions = getRandom(questionBank);
    console.log(getQuestions);
    //questionsEL.children[0].innerHTML = getQuestions.title;
@@ -603,7 +605,7 @@ function sendQuestion() {
 
    for (let index = 0; index < 4; index++) {
       choices.innerHTML += `<li class="choice${index}"></li >`
-      console.log(getQuestions[index + 1]);
+      console.log(getQuestions.[index + 1]); //  undefined, desired output is each choice
    }
 
    // if ("class=choice0")
@@ -691,5 +693,20 @@ function sendHighscore()
 
 
 */
+
+  // Get id of element clicked by user
+  $("#color-picker").click(function(event) {
+   userAnswer = event.target.id;
+
+   // Compare id to target id
+   if (userAnswer === targetColorOfText) {
+     alert("You win!");
+     reset();
+   }
+   else {
+     alert("Wrong!");
+     reset();
+   }
+ });
 
 buttonClick.addEventListener("click", sendQuestion);

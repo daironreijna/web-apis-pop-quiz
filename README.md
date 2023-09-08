@@ -2,6 +2,10 @@
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
+![web-apis-pop-quiz](https://img.shields.io/github/languages/top/daironreijna/web-apis-pop-quiz)
+
+![web-apis-pop-quiz](https://img.shields.io/github/languages/count/daironreijna/web-apis-pop-quiz)
+
 ## Overview
 
 This coding project relates to building a timed coding quiz with multiple-choice questions. This README will provide an overview of the project, its purpose, and the requirements. 
@@ -147,6 +151,10 @@ Put your skills to the test with the Code Quiz Challenge. Build a timed, multipl
 
 - [Wappalyzer (n.d.) Identify technologies on websites](https://www.wappalyzer.com)
 
+- [GitHub keeps saying "This branch is X commits ahead, Y commits behind"](https://stackoverflow.com/questions/41283955/github-keeps-saying-this-branch-is-x-commits-ahead-y-commits-behind)
+
+- [git ahead/behind info between master and branch?](https://stackoverflow.com/questions/20433867/git-ahead-behind-info-between-master-and-branch)
+
 ## Contributing
 
 Acknowledgement: [Pseudocoding](./assets/pseudocoding%20excercise%201%20Sept%2023.txt) took place in colloboration during a breakout room with other Front End Web Dev & UX bootcamp students. 
@@ -162,7 +170,7 @@ Coding of JS solely by developer.
   </tr>
 </table>
 
-I welcome contributions from the community to enhance the Bootstrap Portfolio Project. By participating in this project, you contribute to a vibrant and inclusive environment. To ensure a positive experience the code of conduct we will adhere to is based on [The Contributor Covenant](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md). Please review and follow these guidelines when contributing.
+I welcome contributions from the community to enhance this Portfolio Project. By participating in this project, you contribute to a vibrant and inclusive environment. To ensure a positive experience the code of conduct we will adhere to is based on [The Contributor Covenant](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md). Please review and follow these guidelines when contributing.
 
 ## Accessibility Testing
 
