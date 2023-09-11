@@ -46,6 +46,14 @@ To run the application, you can visit the live URL where it's deployed.
 Additionally, you can clone the project repository and open the HTML file in a web browser.
 <u>https://github.com/daironreijna/web-apis-pop-quiz</u>
 
+<b>How to Play</b>
+1. Click the "Start Quiz" button to begin.
+2. Answer each question within the time limit.
+3. For every incorrect answer, 10 seconds are deducted from your remainting time.
+4. Scores are based to your remaining time.
+5. At the end of the quiz, you can save your score by entering your initials and clicking "Submit".
+6. View the leaderboard by clicking "High Scores" link.
+
 ### The Power of Web APIs
 
 Some APIs are already built directly into web browsers. When a web page loads, a virtual representation of the page known as the Document Object Model (DOM) is created. This DOM allows us to leverage JavaScript to interact with HTML elements, transforming static web content into dynamic and engaging user experiences.
@@ -155,6 +163,9 @@ Put your skills to the test with the Code Quiz Challenge. Build a timed, multipl
 
 - [git ahead/behind info between master and branch?](https://stackoverflow.com/questions/20433867/git-ahead-behind-info-between-master-and-branch)
 - [Nelson Michael (2021) Storing and retrieving JavaScript objects in localStorage](https://blog.logrocket.com/storing-retrieving-javascript-objects-localstorage/)
+- [W3 Schools (n.d.) HTML Web Storage API](https://www.w3schools.com/html/html5_webstorage.asp)
+
+- [StackOverFlow (2021) Question: Randomising the answers in a multiple choice quiz game](https://stackoverflow.com/questions/72085416/randomising-the-answers-in-a-multiple-choice-quiz-game)
 
 ## Contributing
 
