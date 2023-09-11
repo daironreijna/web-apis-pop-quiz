@@ -47,10 +47,25 @@ ol {
 li {
   padding: 5px;
   list-style: decimal inside none;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 0;
+  transition: background-color 0.1s;
 }
 
 li:nth-child(odd) {
   background-color: #f3edfc;
+}
+
+ul li a {
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  padding: 5px;
+}
+ul li a:hover {
+  background-color: #ccc;
 }
 
 .wrapper {

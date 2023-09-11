@@ -13,6 +13,7 @@ const titleQuestion = document.querySelector("h2");
 
 const buttonClick = document.querySelector("#start");
 
+
 const questionChoices = document.querySelector("#choices");
 
 // Funtion for getting a random element from an array
@@ -71,7 +72,7 @@ function sendQuestion() {
 
    // create the list elements on the HTML page
    for (let index = 0; index < 4; index++) {
-      choices.innerHTML += `<li class="choice-${index}"></li>`
+      choices.innerHTML += `<li><a id="userClick" class="choice-${index}" ></a></li>`
    }
 
    // create variables that point to the respective list nr
@@ -84,7 +85,7 @@ function sendQuestion() {
 
    let choicesArray = [];
    choicesArray = [getQuestions.Q1, getQuestions.Q2, getQuestions.Q3, getQuestions.Q4];
-   
+
    // shuffle the multiple choice questions
    for (let index2 = 0; index2 < 4; index2++) {
       shuffle(choicesArray);
@@ -95,155 +96,22 @@ function sendQuestion() {
    option3.innerHTML = choicesArray[2];
    option4.innerHTML = choicesArray[3];
 
-   //var input = document.getElementById('TI').value;
-   //localStorage.setItem('TI', input);
-   //document.getElementById('TI').value = localStorage.getItem('TI');
-
-   // // store
-   // localStorage.setItem('choice0Local', choiceQ1)
-   // // Retrieve
-   // //document.getElementById("choice4").innerHTML = localStorage.getItem("choice0Local");
-   // // store
-   // localStorage.setItem('choice1Local', choiceQ2)
-   // // Retrieve
-   // //document.getElementById("choice5").innerHTML = localStorage.getItem("choice1Local");
-   // // store
-   // localStorage.setItem('choice2Local', choiceQ3)
-   // // Retrieve
-   // //document.getElementById("choice6").innerHTML = localStorage.getItem("choice2Local");
-   // // store
-   // localStorage.setItem('choice3Local', choiceQ4)
-   // // Retrieve
-   // //document.getElementById("choice7").innerHTML = localStorage.getItem("choice3Local");
-   // // storage
-   // //localStorage.setItem('answerLocal', answer)
-
-
-
-   // //var choice1 = document.getElementById("#choice1");
-   // // var text1 = document.createTextNode(choiceQ2);
-
-   // // //   choice1.innerHTML(text1);
-
-   // // var choice2 = document.getElementById("#choice2");
-   // // var text2 = document.createTextNode(choiceQ3);
-
-   // // // choice2.innerHTML(text2);
-
-   // // var choice3 = document.getElementById("#choice3");
-   // // var text3 = document.createTextNode(choiceQ4);
-   // // console.log(choice3)
-   // // console.log(text3)
-   // // //choice3.innerHTML(text3);
-
-   window.localStorage.setItem("JSONgetQuestions", JSON.stringify(getQuestions));
-
-   // let newObject = window.localStorage.getItem("JSONgetQuestions");
-   // console.log(JSON.parse(newObject));
-
-   // let formDataArry = localStorage.getItem('formDataArry') || []
-
-   // let inputData2Array = JSON.stringify(getRandom(questionBank))
-
-   // formDataArry.push(inputData2Array)
-
-   // localStorage.setItem('formDataArry', formDataArry)
-
-   // if ("class=choice0")
-   // function choiceList(index){
-   //    if ((index + 1) === 1) {
-   //       return choiceQ1;
-   //    } else if ((index + 1) === 2) {
-   //       return choiceQ2;
-   //    } else if ((index + 1) === 3) {
-   //       return choiceQ3;
-   //    } else if ((index + 1) === 4) {
-   //       return choiceQ4;
-   //    }
-   // }
 };
 
-// local storage 
-
-
-// window.localStorage.setItem("JSONquestionBank_random", JSON.stringify(getRandom(questionBank)));
-
-// let newObject2 = window.localStorage.getItem("JSONquestionBank_random");
-// console.log(JSON.parse(newObject2));
-
-// fillHTML = JSON.parse(newObject2);
-// fillHTML2 = newObject2;
-
-// // var choice4 = document.getElementById("#choice4");
-// console.log(`fillHTML ln 667 ${fillHTML}`);
-// console.log(`fillHTML ln 668 ${fillHTML2}`);
-
-// let formDataArry2 = localStorage.getItem('formDataArry2') || []
-
-// let inputData2Array2 = JSON.stringify(getRandom(questionBank))
-
-// formDataArry2.push(inputData2Array2)
-
-// localStorage.setItem('formDataArry2', formDataArry2)
-
-
-// var choice5 = document.getElementById("#choice5");
-// choice5.textContent = fillHTML[2];
-
-// var choice6 = document.getElementById("#choice6");
-// choice6.textContent = fillHTML[3];
-
-// var choice7 = document.getElementById("#choice7");
-// choice7.textContent = fillHTML[4];
+// Saving user choice
+function storeResponse(event) {
+   console.log("function Store response called");
+   
+   var input = document.getElementById("userClick").textContent;
+   localStorage.setItem("userAnswer", input);
+};
 
 
 
 /*
 When working with the window.localStorage object, you should be familiar with the following methods: setItem, getItem, removeItem, clear, and key.
-
+ 
 */
-
-// document.body.appendChild(box1);
-
-// var box2 = document.createElement("div");
-
-// box2.innerHTML = choiceQ2;
-
-// document.body.appendChild(box2);
-
-// var box3 = document.createElement("div");
-
-// box3.innerHTML = choiceQ3;
-
-// document.body.appendChild(box3);
-
-
-// var box4 = document.createElement("div");
-
-// box4.innerHTML = choiceQ4;
-
-// document.body.appendChild(box4);
-
-//questionChoices 
-
-//    var boxes = questionsEL.querySelector("boxes"); 
-//    boxes.addEventListener("click", function (event) {
-//       // if they select any of the div elements and its content corresponds with the correct answer for that question bank then highlight correct or highlight incorrect and deduct 10s from 'timeLeft'.
-//       if (answer === event)
-//          console.log("correct");
-//          //setAnswerText()
-//       else {
-//          console.log("incorrect");
-//          timeLeft -= 10;
-//          //setAnswerText()
-//       }
-
-//    });
-// }
-
-// function setAnswerText() {
-
-// }
 
 /*
 function pushQuestions(event) {
@@ -251,7 +119,7 @@ function pushQuestions(event) {
    event.preventDefault();
    // Sets interval in variable
    var questionInterval = setInterval(function() {
-
+ 
        // As long as the `timeLeft` is greater than 1
        if (secondsLeft > 0){
            // Set the `textContent` of `timerEl` to show the remaining seconds
@@ -269,10 +137,10 @@ function pushQuestions(event) {
        }
    },1000);
 };
-
+ 
 function sendHighscore()
-
-
+ 
+ 
 */
 
 // Get id of element clicked by user
@@ -291,3 +159,4 @@ function sendHighscore()
 // });
 
 buttonClick.addEventListener("click", sendQuestion);
+choices.addEventListener("click", storeResponse);
