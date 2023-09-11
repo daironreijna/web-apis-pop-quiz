@@ -6,19 +6,19 @@ In the pursuit of creating a digital world that is inclusive and equitable for a
 
 ### Be Part of the Solution
 
-As you engage with the concept of accessible design, consider your role as a developer in contributing to a more inclusive web. Companies are increasingly recognizing the significance of accessible design, not only for ethical reasons but also due to legal requirements and business advantages. In the UK, the Equality Act 2010 mandates that website owners make "reasonable adjustments" to ensure accessibility.
+As I engage with the concept of accessible design, my role as a developer contributes to a more inclusive web. Companies are increasingly recognizing the significance of accessible design, not only for ethical reasons but also due to legal requirements and business advantages. In the UK, the Equality Act 2010 mandates that website owners make "reasonable adjustments" to ensure accessibility.
 
 ### Your Impact
 
-By implementing accessible design principles and conducting thorough accessibility testing, you contribute to making the digital landscape a more accessible and inclusive space. It's important to remember that your work as a developer can directly impact the lives of over one billion people globally who have disabilities, as identified by the World Health Organization.
+By implementing accessible design principles and conducting thorough accessibility testing, you contribute to making the digital landscape a more accessible and inclusive space. It's important to remember that our work as a developer can directly impact the lives of over one billion people globally who have disabilities, as identified by the World Health Organization.
 
 ### Testing for Accessibility
 
-We encourage you to actively engage in accessibility testing for your projects. Try out tools such as the WCAG Color Contrast Checker to ensure your color choices meet accessibility standards. Explore the Accessibility Inspector in Firefox Developer Tools to identify and rectify accessibility issues in your web content.
+There is a need to actively engage in accessibility testing in our web dev projects. Try out tools such as the WCAG Color Contrast Checker to ensure your color choices meet accessibility standards. Explore the Accessibility Inspector in Firefox Developer Tools to identify and rectify accessibility issues in your web content.
 
 ### Your Feedback Matters
 
-Testing for accessibility is an ongoing process, and user feedback is invaluable. We invite you to experience your projects from the perspective of diverse users. Try using screen readers, keyboard navigation, and other assistive technologies to identify potential barriers. Your feedback will not only improve your projects but contribute to a more inclusive digital ecosystem.
+Testing for accessibility is an ongoing process, and user feedback is invaluable. As a web developer it is important to experience your projects from the perspective of diverse users. Try using screen readers, keyboard navigation, and other assistive technologies to identify potential barriers. Also user feedback will not only improve your projects but contribute to a more inclusive digital ecosystem.
 
 ### Resources for Accessibility Testing
 

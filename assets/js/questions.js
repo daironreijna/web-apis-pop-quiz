@@ -584,7 +584,7 @@ function sendQuestion() {
    list2.add("start");
 
    // get questions to show on html but randomise which ones are shown.
-   
+
    const getQuestions = getRandom(questionBank);
    console.log(getQuestions);
    //questionsEL.children[0].innerHTML = getQuestions.title;
@@ -605,8 +605,39 @@ function sendQuestion() {
 
    for (let index = 0; index < 4; index++) {
       choices.innerHTML += `<li class="choice${index}"></li >`
-      console.log(getQuestions.[index + 1]); //  undefined, desired output is each choice
+
+      // console.log(getQuestions.[index + 1]); //  undefined, desired output is each choice
    }
+
+   //var input = document.getElementById('TI').value;
+   //localStorage.setItem('TI', input);
+   //document.getElementById('TI').value = localStorage.getItem('TI');
+   localStorage.setItem('choice0Local', choiceQ1)
+   localStorage.setItem('choice1Local', choiceQ2)
+   localStorage.setItem('choice2Local', choiceQ3)
+   localStorage.setItem('choice3Local', choiceQ4)
+   localStorage.setItem('answerLocal', answer)
+   
+   var choice1 = document.getElementById("#choice1");
+   // var text1 = document.createTextNode(choiceQ2);
+
+   // //   choice1.innerHTML(text1);
+
+   // var choice2 = document.getElementById("#choice2");
+   // var text2 = document.createTextNode(choiceQ3);
+
+   // // choice2.innerHTML(text2);
+
+   // var choice3 = document.getElementById("#choice3");
+   // var text3 = document.createTextNode(choiceQ4);
+   // console.log(choice3)
+   // console.log(text3)
+   // //choice3.innerHTML(text3);
+
+   window.localStorage.setItem("JSONgetQuestions", JSON.stringify(getQuestions));
+
+   let newObject = window.localStorage.getItem("JSONgetQuestions");
+   console.log(JSON.parse(newObject));
 
    // if ("class=choice0")
    // function choiceList(index){
@@ -621,6 +652,35 @@ function sendQuestion() {
    //    }
    // }
 };
+
+// local storage 
+
+
+window.localStorage.setItem("JSONquestionBank_random", JSON.stringify(getRandom(questionBank)));
+
+let newObject2 = window.localStorage.getItem("JSONquestionBank_random");
+console.log(JSON.parse(newObject2));
+
+fillHTML = JSON.parse(newObject2);
+
+// var choice4 = document.getElementById("#choice4");
+console.log(`fillHTML ln 667 ${fillHTML}`);
+
+// var choice5 = document.getElementById("#choice5");
+// choice5.textContent = fillHTML[2];
+
+// var choice6 = document.getElementById("#choice6");
+// choice6.textContent = fillHTML[3];
+
+// var choice7 = document.getElementById("#choice7");
+// choice7.textContent = fillHTML[4];
+
+
+
+/*
+When working with the window.localStorage object, you should be familiar with the following methods: setItem, getItem, removeItem, clear, and key.
+
+*/
 
 // document.body.appendChild(box1);
 
@@ -694,19 +754,19 @@ function sendHighscore()
 
 */
 
-  // Get id of element clicked by user
-  $("#color-picker").click(function(event) {
-   userAnswer = event.target.id;
+// Get id of element clicked by user
+// $("#color-picker").click(function (event) {
+//    userAnswer = event.target.id;
 
-   // Compare id to target id
-   if (userAnswer === targetColorOfText) {
-     alert("You win!");
-     reset();
-   }
-   else {
-     alert("Wrong!");
-     reset();
-   }
- });
+//    // Compare id to target id
+//    if (userAnswer === targetColorOfText) {
+//       alert("You win!");
+//       reset();
+//    }
+//    else {
+//       alert("Wrong!");
+//       reset();
+//    }
+// });
 
 buttonClick.addEventListener("click", sendQuestion);

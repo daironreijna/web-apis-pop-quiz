@@ -154,6 +154,7 @@ Put your skills to the test with the Code Quiz Challenge. Build a timed, multipl
 - [GitHub keeps saying "This branch is X commits ahead, Y commits behind"](https://stackoverflow.com/questions/41283955/github-keeps-saying-this-branch-is-x-commits-ahead-y-commits-behind)
 
 - [git ahead/behind info between master and branch?](https://stackoverflow.com/questions/20433867/git-ahead-behind-info-between-master-and-branch)
+- [Nelson Michael (2021) Storing and retrieving JavaScript objects in localStorage](https://blog.logrocket.com/storing-retrieving-javascript-objects-localstorage/)
 
 ## Contributing
 
