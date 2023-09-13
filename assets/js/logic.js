@@ -16,7 +16,7 @@ let timerID;
 const timeEL = document.querySelector("#time");
 const startButton = document.querySelector("#start");
 const submitButton = document.querySelector("submit");
-console.log(submitButton);
+
 
 let timeLeft = 10 // (Needs to be 3 minutes for ten questions)
 let minutesLeft = 0;
@@ -61,19 +61,18 @@ function timer(event) {
             timeEL.textContent = (`${minutesLeft} : ${secondsLeft}`);
             minutesLeft--;
             secondsLeft = 59;
-            // Calls function to create and append highscore
-           // sendHighscore();
+            
         } else if (minutesLeft === 0 && secondsLeft === 1) {
             secondsLeft = 0 
             timeEL.textContent = (`${minutesLeft} : ${secondsLeft}`);
                         
         }  else {
             timeEL.textContent = (`${minutesLeft} : ${secondsLeft}`);
-            // ====================
-            timeLeft = 0;
-            console.log(`${timeLeft}`)
             // Stops execution of action at set interval
             clearInterval(timerInterval);
+            // Calls function to create and append highscore
+            sendHighscore();
+
         }
     },1000);
 };

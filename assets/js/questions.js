@@ -13,7 +13,7 @@ const titleQuestion = document.querySelector("h2");
 const buttonClick = document.querySelector("#start");
 const questionChoices = document.querySelector("#choices");
 const sfxCorrect = new Audio("assets/sfx/correct.wav");
-const sfxIncorrect = new Audio("assets/sfx/incorrect.wax");
+const sfxIncorrect = new Audio("assets/sfx/incorrect.wav");
 
 // Funtion for getting a random element from an array
 function getRandom(arr) {
@@ -74,8 +74,17 @@ function sendQuestion() {
       choices.innerHTML += `<li class="ui-grid-cell"><a id="userClick" class="choice-${index}" ></a></li>`
    }
 
-   var listOptions = document.querySelector(".ui-grid-cell");
-   console.log(listOptions);
+   var listOptions = document.querySelectorAll(".ui-grid-cell");
+   
+   listOptions.forEach(item => {
+      item.addEventListener('click', event => {
+         console.log(this.text);
+      })
+   })
+
+   var listChoices = document.querySelectorAll(".choice-0,.choice-1,.choice-2,.choice-3");
+   console.log(listChoices);
+
    // create variables that point to the respective list nr
    var option1 = document.querySelector(".choice-0");
    var option2 = document.querySelector(".choice-1");
@@ -102,10 +111,10 @@ function sendQuestion() {
 
 // Saving user choice
 function storeResponse(event) {
-   console.log("function Store response called");
+   // works - console.log("function Store response called");
 
    var queryResult = document.getElementsByClassName('ui-grid-cell');
-   console.log(queryResult)
+   //console.log(queryResult)
 };
 
 function stacked(event) {
@@ -115,7 +124,7 @@ function stacked(event) {
 }
 
 
-// sending next question
+// get the next question
 function nextQuestion(event) {
    // is this needed - event.preventDefault();
    if (timeLeft === 0) {
@@ -137,35 +146,44 @@ When working with the window.localStorage object, you should be familiar with th
  
 */
 
-/*
-function pushQuestions(event) {
-   // Prevent default action
-   event.preventDefault();
-   // Sets interval in variable
-   var questionInterval = setInterval(function() {
+
+// function pushQuestions(event) {
+//    // Prevent default action
+//    event.preventDefault();
+//    // Sets interval in variable
+//    var questionInterval = setInterval(function() {
  
-       // As long as the `timeLeft` is greater than 1
-       if (secondsLeft > 0){
-           // Set the `textContent` of `timerEl` to show the remaining seconds
-           timeEL.textContent = (`${ minutesLeft } : ${ secondsLeft } `);
-           // Decrement `timeLeft` by 1
-           secondsLeft--;
-       } else if (secondsLeft === 0) {
-           minutesLeft--;
-           secondsLeft = 59;
-           // Calls function to create and append highscore
-          // sendHighscore();
-       } else if (minutesLeft === 0 && secondsLeft === 0) {
-           // Stops execution of action at set interval
-           clearInterval(questionInterval);
-       }
-   },1000);
-};
- 
-function sendHighscore()
- 
- 
-*/
+//        // As long as the `timeLeft` is greater than 1
+//        if (secondsLeft > 0){
+//            // Set the `textContent` of `timerEl` to show the remaining seconds
+//            timeEL.textContent = (`${ minutesLeft } : ${ secondsLeft } `);
+//            // Decrement `timeLeft` by 1
+//            secondsLeft--;
+//        } else if (secondsLeft === 0) {
+//            minutesLeft--;
+//            secondsLeft = 59;
+//            // Calls function to create and append highscore
+//           // sendHighscore();
+//        } else if (minutesLeft === 0 && secondsLeft === 0) {
+//            // Stops execution of action at set interval
+//            clearInterval(questionInterval);
+//        }
+//    },1000);
+// };
+
+function sendHighscore() {
+   
+   let endScreenElement = document.getElementById("end-screen");
+   endScreenElement.removeAttribute("class");
+
+   let finalScoreElement = document.getElementById("final-score");
+   finalScoreElement.textContent = (`${minutesLeft} : ${secondsLeft}`)
+   
+   questionsEL.setAttribute("class", "hide");
+   
+}
+
+
 
 // Get id of element clicked by user
 // $("#color-picker").click(function (event) {
@@ -187,17 +205,18 @@ function sendHighscore()
 
 buttonClick.addEventListener("click", sendQuestion);
 choices.addEventListener("click", storeResponse);
+
 //$(document).on('click','#ui-grid-cell',function(){console.log($(this))});
 //$(document).on('click','#userClick',function(){console.log($(this))});
 
-$("#choices").on("click", "li", function(event) {
-   var elem = $(this);
-   if (elem.is("li")) {
-      //event.preventDefault();
-      //localStorage.getItem('validAnswer')
-      console.log("black")//$(this).text());
-   }
-});
+// $("#choices").on("click", "li", function(event) {
+//    var elem = $(this);
+//    if (elem.is("li")) {
+//       //event.preventDefault();
+//       //localStorage.getItem('validAnswer')
+//       console.log("black")//$(this).text());
+//    }
+// });
 
 
 // choices.addEventListener("click", () => {
