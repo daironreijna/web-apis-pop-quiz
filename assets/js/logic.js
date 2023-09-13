@@ -5,9 +5,18 @@
 /* Setup of variable containers
    ============================================ */
 
-const timeEL = document.querySelector("#time");
 
+// variables to keep track if quiz state
+let questions = [{"title": "question1", "choices":["1.1", "1.2", "1.3", "1.4"], "answer": "1.4"}, {"title": "quetion2", "choices":["2.1", "2.2", "2.3", "2.2"], "answer": "1.4"}, {"title": "question3", "choices":["3.1", "3.2", "3.3", "3.4"], "answer": "3.1"}]
+let currentQuestionIndex = 0;
+let time = questions.length * 15;
+let timerID;
+
+// HTML elements;
+const timeEL = document.querySelector("#time");
 const startButton = document.querySelector("#start");
+const submitButton = document.querySelector("submit");
+console.log(submitButton);
 
 let timeLeft = 10 // (Needs to be 3 minutes for ten questions)
 let minutesLeft = 0;
