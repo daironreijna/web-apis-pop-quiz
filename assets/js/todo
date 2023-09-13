@@ -1,0 +1,22 @@
+[1] Consider using Callbacks to ensure code flows correctly. 
+- [W3Schools (no date) JS Async > JavaScript Callbacks](https://www.w3schools.com/js/js_callback.asp)
+- [MDN Web Docs (n.d.) Glossary: Definitions of Web-related terms > Callback function](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function)
+
+[2] amend to <li>
+- [Kingsley Ubah (2021) The DOM Explained for Beginners – How the Document Object Model Works](https://www.freecodecamp.org/news/dom-explained-everything-you-need-to-know-about-the-document-object-model/)
+var btn = document.querySelector( 'button' );‌‌
+btn.addEventListener( 'click' ,foo);‌‌
+function foo() { alert( 'submitted!' ); 
+  				btn.innerHTML = '';
+          }
+<!--
+I am stuck with getting the onClick event to register the correct userResponse. I deleted a bit of code to start over. 
+
+Areas still to be developed:
+
+saving users response to localstorage
+compare local storage and then count correct answer.
+store amount of correct answers and show this on the page once the time is completed.
+still to use sound for incorrect or correct elements.
+etc.
+-->

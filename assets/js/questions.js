@@ -14,6 +14,7 @@ const buttonClick = document.querySelector("#start");
 const questionChoices = document.querySelector("#choices");
 const sfxCorrect = new Audio("assets/sfx/correct.wav");
 const sfxIncorrect = new Audio("assets/sfx/incorrect.wav");
+let userHighscore = localStorage.setItem('userScore');
 
 // Funtion for getting a random element from an array
 function getRandom(arr) {
@@ -74,17 +75,6 @@ function sendQuestion() {
       choices.innerHTML += `<li class="ui-grid-cell"><a id="userClick" class="choice-${index}" ></a></li>`
    }
 
-   var listOptions = document.querySelectorAll(".ui-grid-cell");
-   
-   listOptions.forEach(item => {
-      item.addEventListener('click', event => {
-         console.log(this.text);
-      })
-   })
-
-   var listChoices = document.querySelectorAll(".choice-0,.choice-1,.choice-2,.choice-3");
-   console.log(listChoices);
-
    // create variables that point to the respective list nr
    var option1 = document.querySelector(".choice-0");
    var option2 = document.querySelector(".choice-1");
@@ -106,23 +96,28 @@ function sendQuestion() {
    option3.innerHTML = choicesArray[2];
    option4.innerHTML = choicesArray[3];
 
-   localStorage.setItem('validAnswer', getQuestions.Answer);
 };
 
 // Saving user choice
-function storeResponse(event) {
+function checkResponse(event) {
    // works - console.log("function Store response called");
 
    var queryResult = document.getElementsByClassName('ui-grid-cell');
+   const element = event.target
+   console.log(element.innerHTML)
+   if (element.innerHTML === getQuestions.Answer) {
+      alert('correct');
+      userHighscore.value++
+      //sfxCorrect
+   } else {
+      alert('incorrect');
+      //sfxIncorrect
+   }
+   
+
+
    //console.log(queryResult)
 };
-
-function stacked(event) {
-
-   var input3 = document.getElementsByClassName("ui-grid-cell").innerHTML;
-   localStorage.setItem("todoDataStacked", input3);
-}
-
 
 // get the next question
 function nextQuestion(event) {
@@ -191,11 +186,11 @@ function sendHighscore() {
 
 //    // Compare id to target id
 //    if (userAnswer === targetColorOfText) {
-//       alert("You win!");
+//       alert("Correct");
 //       reset();
 //    }
 //    else {
-//       alert("Wrong!");
+//       alert(Incorrect!");
 //       reset();
 //    }
 // });
@@ -204,7 +199,7 @@ function sendHighscore() {
 // ================================================
 
 buttonClick.addEventListener("click", sendQuestion);
-choices.addEventListener("click", storeResponse);
+choices.addEventListener("click", checkResponse);
 
 //$(document).on('click','#ui-grid-cell',function(){console.log($(this))});
 //$(document).on('click','#userClick',function(){console.log($(this))});

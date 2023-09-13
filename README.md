@@ -11,6 +11,7 @@
 This coding project relates to building a timed coding quiz with multiple-choice questions. This README will provide an overview of the project, its purpose, and the requirements. 
 
 ## Table of Contents
+
 [Description](#description)
 [Features](#feautures)
 [How to Run the Application](#how-to-run-the-application)
@@ -166,6 +167,8 @@ Put your skills to the test with the Code Quiz Challenge. Build a timed, multipl
 - [W3 Schools (n.d.) HTML Web Storage API](https://www.w3schools.com/html/html5_webstorage.asp)
 
 - [StackOverFlow (2021) Question: Randomising the answers in a multiple choice quiz game](https://stackoverflow.com/questions/72085416/randomising-the-answers-in-a-multiple-choice-quiz-game)
+
+- [Flavio Copes (2019) How to add an event listener to multiple elements in JavaScript](https://flaviocopes.com/how-to-add-event-listener-multiple-elements-javascript/)
 
 ## Contributing
 
