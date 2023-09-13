@@ -13,7 +13,6 @@ const titleQuestion = document.querySelector("h2");
 
 const buttonClick = document.querySelector("#start");
 
-
 const questionChoices = document.querySelector("#choices");
 
 // Funtion for getting a random element from an array
@@ -62,9 +61,9 @@ function sendQuestion() {
    // get questions to show on html but randomise which question is shown from the questionBank.
 
    const getQuestions = getRandom(questionBank);
-   console.log(getQuestions)
+   
    var questionTitle = document.querySelector("#question-title");
-   console.log(questionTitle)
+   
    questionTitle.innerHTML = getQuestions.title;
 
    // variable to append list of options/multiple choice 
@@ -72,9 +71,11 @@ function sendQuestion() {
 
    // create the list elements on the HTML page
    for (let index = 0; index < 4; index++) {
-      choices.innerHTML += `<li><a id="userClick" class="choice-${index}" ></a></li>`
+      choices.innerHTML += `<li class="ui-grid-cell"><a id="userClick" class="choice-${index}" ></a></li>`
    }
 
+   var listOptions = document.querySelector(".ui-grid-cell");
+   console.log(listOptions);
    // create variables that point to the respective list nr
    var option1 = document.querySelector(".choice-0");
    var option2 = document.querySelector(".choice-1");
@@ -96,17 +97,40 @@ function sendQuestion() {
    option3.innerHTML = choicesArray[2];
    option4.innerHTML = choicesArray[3];
 
+   localStorage.setItem('validAnswer', getQuestions.Answer);
 };
 
 // Saving user choice
 function storeResponse(event) {
    console.log("function Store response called");
    
-   var input = document.getElementById("userClick").textContent;
-   localStorage.setItem("userAnswer", input);
+   var queryResult = document.getElementsByClassName('ui-grid-cell');
+   console.log(queryResult)
 };
 
+function stacked(event) {
 
+   var input3 = document.getElementsByClassName("ui-grid-cell").innerHTML;
+   localStorage.setItem("todoDataStacked", input3);
+}
+
+
+// sending next question
+function nextQuestion(event) {
+   // is this needed - event.preventDefault();
+   if (timeLeft === 0) {
+      console.log(timeLeft)
+      console.log(`nextQuestion function called \n - if statement timeLeft is not zero`)
+      // nextQuestion();
+      return;
+   } else {
+      console.log(`nextQuestion function called \n - if statement timeLeft is zero`)
+      console.log(timeLeft)
+      // sendHighScore();
+      return false;
+   }
+
+}
 
 /*
 When working with the window.localStorage object, you should be familiar with the following methods: setItem, getItem, removeItem, clear, and key.
@@ -158,5 +182,28 @@ function sendHighscore()
 //    }
 // });
 
+// event listeners
+// ================================================
+
 buttonClick.addEventListener("click", sendQuestion);
 choices.addEventListener("click", storeResponse);
+//$(document).on('click','#ui-grid-cell',function(){console.log($(this))});
+//$(document).on('click','#userClick',function(){console.log($(this))});
+
+$("#choices").on("click", "li", function(event) {
+   var elem = $(this);
+   if (elem.is("li")) {
+      //event.preventDefault();
+      //localStorage.getItem('validAnswer')
+      console.log("black")//$(this).text());
+   }
+});
+
+
+// choices.addEventListener("click", () => {
+//    storeResponse();
+//    nextQuestion();
+//    stacked();
+//    console.log(`stacked function called from event listener`)
+   
+// });

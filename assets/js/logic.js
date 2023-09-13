@@ -10,8 +10,8 @@ const timeEL = document.querySelector("#time");
 const startButton = document.querySelector("#start");
 
 let timeLeft = 10 // (Needs to be 3 minutes for ten questions)
-let minutesLeft = 2
-let secondsLeft = 59
+let minutesLeft = 0;
+let secondsLeft = 59;
 
 
 // function timer(event) {
@@ -60,6 +60,9 @@ function timer(event) {
                         
         }  else {
             timeEL.textContent = (`${minutesLeft} : ${secondsLeft}`);
+            // ====================
+            timeLeft = 0;
+            console.log(`${timeLeft}`)
             // Stops execution of action at set interval
             clearInterval(timerInterval);
         }
